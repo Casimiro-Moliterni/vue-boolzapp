@@ -20,9 +20,42 @@ img {
     height: 100vh;
     width: 100%;
     background-color: #d5dbd8;
+    padding: 20px 0px;
+}
+
+.container-xl{
+    height: 100%;
+    width: 85%;
+    margin:  auto;
+    border: 1px solid black;
+    position: relative;
+    z-index: 2;
 }
 
 .top-desktop-green{
-    height: 30%;
+    width: 100%;
+    height: 150px;
     background-color: #009688;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.col-30{
+    width: 30%;
+    border: 1px solid gray;
+}
+.col-70{
+    width: 70%;
+    border: 1px solid gray;
+
+}
+
+/* colonne container centrale  */
+
+/* classe d-flex  */
+
+.d-flex{
+    display: flex;
 }
