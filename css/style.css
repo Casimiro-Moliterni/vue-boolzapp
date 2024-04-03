@@ -54,6 +54,9 @@ img {
     border: 1px solid gray;
     overflow: hidden;
 }
+.col-50{
+    width: 50%;
+}
 .col-60{
     width: 60%;
     border: 1px solid gray;
@@ -122,6 +125,63 @@ img {
     padding-bottom: 7px;
 }
 
+/* col 60  */
+.container-message{
+    height: calc(100% - 140px);
+    overflow-y: scroll;
+    background-image: url("../img/mine.jpg");
+    padding: 55px 100px;
+}
+.message-go{
+    width: 100%;
+    height: 100%;
+    gap: 150px;
+}
+.container-user-message {
+    margin-top: auto;
+    height: 70px;
+    padding: 10px 25px;
+    background-color: #f3eeea;
+    gap: 25px;
+}
+.container-user-message i{
+    color: #6b7376;
+}
+.message-box{
+    text-align: left;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.user-message{
+    background-color: white;
+}
+
+.my-message{
+    background-color: #d5f9ba;
+}
+.width-40{
+    min-width: 40%;
+}
+.user-message .clock,
+.my-message .clock{
+    display: flex;
+    align-items: end;
+    padding: 5px;
+}
+.user-message .text-message,
+.my-message .text-message{
+    padding: 10px;
+}
+.message,
+.message input{
+    width: 100%;
+}
+
+.message input{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 16px;
+}
 /* classe d-flex utiliti*/
 
 .d-flex{
