@@ -22,6 +22,7 @@ img {
     width: 100%;
     background-color: #d5dbd8;
     padding: 20px 0px;
+    min-width: 1000px;
 }
 
 .container-xl{
@@ -37,7 +38,9 @@ img {
 }
 .container-user{
     height: 100%;
+    flex-grow: 1;
     overflow-y: scroll;
+    background-color: white;
 }
 .top-desktop-green{
     width: 100%;
@@ -49,18 +52,19 @@ img {
     z-index: 1;
 }
 
-.col-40{
-    width: 40%;
+.col-left{
+    width: 30%;
     border: 1px solid gray;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-.col-50{
-    width: 50%;
-}
-.col-60{
-    width: 60%;
+
+.col-right{
+    width: 70%;
     border: 1px solid gray;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* colonne container centrale  */
@@ -73,10 +77,18 @@ img {
     padding-right: 5px;
 }
 
+.icon{
+    gap: 15px;
+}
+
 .notific{
-    padding: 12px 10px;
+    padding: 15px 10px;
     gap: 10px;
     font-size: 14px;
+}
+.notific .grey-icon{
+    text-decoration: underline;
+    
 }
 
 .bell{
@@ -84,14 +96,12 @@ img {
     border-radius: 50%;
     font-size:25px ;
     color:#8edafc ;
+    padding: 10px;
 }
 
-.bell i{
-    padding: 15px 10px;
-}
 
 .search-bar{
-    padding: 10px;
+    padding: 7px;
     background-color: #fafafa;
 }
 
@@ -127,18 +137,13 @@ img {
 
 /* col 60  */
 .container-message{
-    height: calc(100% - 140px);
+    flex-grow: 2;
     overflow-y: scroll;
     background-image: url("../img/mine.jpg");
     padding: 55px 100px;
 }
-.message-go{
-    width: 100%;
-    height: 100%;
-    gap: 150px;
-}
+
 .container-user-message {
-    margin-top: auto;
     height: 70px;
     padding: 10px 25px;
     background-color: #f3eeea;
@@ -152,26 +157,16 @@ img {
     border-radius: 10px;
     margin-bottom: 10px;
 }
-.user-message{
+.receved-message{
     background-color: white;
 }
 
-.my-message{
+.invied-message{
     background-color: #d5f9ba;
 }
-.width-40{
-    min-width: 40%;
-}
-.user-message .clock,
-.my-message .clock{
-    display: flex;
-    align-items: end;
-    padding: 5px;
-}
-.user-message .text-message,
-.my-message .text-message{
-    padding: 10px;
-}
+
+
+/* input col right  */
 .message,
 .message input{
     width: 100%;
@@ -198,10 +193,6 @@ img {
 
 .space-between{
     justify-content: space-between;
-}
-
-.icon{
-    gap: 25px;
 }
 
 /* colori  */
