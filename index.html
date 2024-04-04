@@ -28,7 +28,7 @@
              <div class="col-left">
                 <!-- contenitore header col-30  -->
                     <div class="profile-user d-flex space-between align-items-center bg-grey">
-                        <div class="img-user d-flex align-items-center ">
+                        <div class="img-user d-flex align-items-center " >
                             <img src="img/avatar_io.jpg" alt="">
                             <div class="text-img-user">Sofia</div>
                         </div>
@@ -60,47 +60,11 @@
                     </div>
                     <!-- container utenti  -->
                     <div class="container-user">
-                        <div class="single-user d-flex space-between">
+                        <div class="single-user d-flex space-between" v-for="singleUser in  contacts">
                             <div class="img-user d-flex  ">
-                                <img src="img/avatar_io.jpg" alt="">
+                                <img :src="`img/avatar${singleUser.avatar}.jpg`" alt="">
                                 <div class="text-img-user ">
-                                     <div class="user-name">Sofia</div>
-                                     <div class="small-text">Ultimo messaggio inviato</div>
-                                </div>
-                            </div>
-                            <div class="clock small-text">
-                                12:00
-                            </div>
-                        </div>
-                        <div class="single-user d-flex space-between">
-                            <div class="img-user d-flex  ">
-                                <img src="img/avatar_io.jpg" alt="">
-                                <div class="text-img-user ">
-                                     <div class="user-name">Sofia</div>
-                                     <div class="small-text">Ultimo messaggio inviato</div>
-                                </div>
-                            </div>
-                            <div class="clock small-text">
-                                12:00
-                            </div>
-                        </div>
-                        <div class="single-user d-flex space-between">
-                            <div class="img-user d-flex  ">
-                                <img src="img/avatar_io.jpg" alt="">
-                                <div class="text-img-user ">
-                                     <div class="user-name">Sofia</div>
-                                     <div class="small-text">Ultimo messaggio inviato</div>
-                                </div>
-                            </div>
-                            <div class="clock small-text">
-                                12:00
-                            </div>
-                        </div>
-                        <div class="single-user d-flex space-between">
-                            <div class="img-user d-flex  ">
-                                <img src="img/avatar_io.jpg" alt="">
-                                <div class="text-img-user ">
-                                     <div class="user-name">Sofia</div>
+                                     <div class="user-name">{{singleUser.name}}</div>
                                      <div class="small-text">Ultimo messaggio inviato</div>
                                 </div>
                             </div>
