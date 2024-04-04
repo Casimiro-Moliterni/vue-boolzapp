@@ -150,7 +150,7 @@ img {
     height: fit-content;
     min-width: 40%;
     border-radius: 5px;
-    padding: 15px 5px 5px 15px;
+    padding: 10px 5px 5px 10px;
 }
 .receved-message{
     background-color: white;
