@@ -60,7 +60,12 @@
                     </div>
                     <!-- container utenti  -->
                     <div class="container-user">
-                        <div class="single-user d-flex space-between" v-for="singleUser in  contacts">
+                        <div
+                         class="single-user d-flex space-between" 
+                         v-for="singleUser,index in  contacts" 
+                         @click="enableItem(index)"
+                         :class="{'active': index === activeItem}"
+                          >
                             <div class="img-user d-flex  ">
                                 <img :src="`img/avatar${singleUser.avatar}.jpg`" alt="">
                                 <div class="text-img-user ">
@@ -77,9 +82,10 @@
              <div class="col-right ">
                 <!-- header col-60  -->
                 <div class="profile-user d-flex space-between align-items-center bg-grey">
-                    <div class="img-user d-flex align-items-center">
-                        <img src="img/avatar_io.jpg" alt="">
-                        <div class="text-img-user">Sofia
+                    <div class="img-user d-flex align-items-center"  >
+                        <img :src="`img/avatar${contacts[activeItem].avatar}.jpg`"s alt="">
+                        <div class="text-img-user">
+                            {{contacts[activeItem].name}}
                             <div class="grey-icon">ultimo accesso oggi alle 13:40</div>
                         </div>
                     </div>
@@ -92,8 +98,8 @@
                 <!-- parte centrale col-60  -->
                  <div class="container-message ">
                     <div class="box-message   ">
-                        <div class="message-box receved-message">
-                            <div class="text-script">ciao come stai?</div>
+                        <div class="message-box receved-message" >
+                            <div class="text-script"></div>
                             <div class="small-text clock-message">12/06/2024 14:40</div>
                         </div>
                         <div class="message-box invied-message">

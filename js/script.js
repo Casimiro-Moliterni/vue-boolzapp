@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+          activeItem: 0,
             contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -86,5 +87,16 @@ createApp({
         };
     },
     methods: {
+      activeContact(index){
+       if(this.contacts[index].visible === true){
+        this.contacts[index].visible = false ;
+       } else {
+        this.contacts[index].visible = true ;
+       }
+       console.log(this.contacts[index].visible)
+      },
+      enableItem(indexToActivate) {
+        this.activeItem = indexToActivate;
+    },
     }
 }).mount('#app');
