@@ -29,9 +29,9 @@ img {
     height: 100%;
     width: 85%;
     margin: 0 auto;
-    border: 1px solid black;
     position: relative;
     z-index: 2;
+    border:1px solid #ecedeb;
 }
 .container-col-30{
     padding: 10px;
@@ -54,14 +54,13 @@ img {
 
 .col-left{
     width: 30%;
-    border: 1px solid gray;
+    border-right: 1px solid #d5d5d5;
     display: flex;
     flex-direction: column;
 }
 
 .col-right{
     width: 70%;
-    border: 1px solid gray;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -125,7 +124,7 @@ img {
 .single-user{
     padding: 10px;
     background-color: white;
-    border-top: 1px solid #f5f5f5;
+    border-top: 1px solid #f6f6f6;
 }
 .single-user .img-user img{
     height: 60px;
@@ -140,33 +139,47 @@ img {
     flex-grow: 2;
     overflow-y: scroll;
     background-image: url("../img/mine.jpg");
-    padding: 55px 100px;
+    padding: 55px 80px;
+}
+.box-message{
+    height: fit-content;
+    width: 100%;
+}
+.message-box{
+    width: fit-content;
+    height: fit-content;
+    min-width: 40%;
+    border-radius: 5px;
+    padding: 15px 5px 5px 15px;
+}
+.receved-message{
+    background-color: white;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+}
+.clock-message{
+    margin-top: 4px;
+    text-align: right;
+}
+.invied-message{
+    background-color: #d5f9ba;
+    margin-left: auto;
+    margin-bottom: 10px;
 }
 
+
+/* input col right  */
+.container-user-message i{
+    color: #6b7376;
+    font-size: 22px;
+}
 .container-user-message {
     height: 70px;
     padding: 10px 25px;
     background-color: #f3eeea;
     gap: 25px;
 }
-.container-user-message i{
-    color: #6b7376;
-}
-.message-box{
-    text-align: left;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-.receved-message{
-    background-color: white;
-}
-
-.invied-message{
-    background-color: #d5f9ba;
-}
-
-
-/* input col right  */
 .message,
 .message input{
     width: 100%;
