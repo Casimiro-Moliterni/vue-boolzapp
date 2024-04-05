@@ -70,7 +70,7 @@ createApp({
                 ],
               },
               {
-                name: 'Luisa',
+                name: 'Alessandro B.',
                 avatar: '_4',
                 visible: true,
                 messages: [{
@@ -81,6 +81,48 @@ createApp({
                   {
                     date: '10/01/2020 15:50:00',
                     message: 'Si, ma preferirei andare al cinema',
+                    status: 'received'
+                  }
+                ],
+              },
+              {
+                name: 'Alessandro L.',
+                avatar: '_5',
+                visible: true,
+                messages: [
+                ],
+              },
+              {
+                name: 'Claudia',
+                avatar: '_6',
+                visible: true,
+                messages: [
+                ],
+              },
+              {
+                name: 'Federico',
+                avatar: '_7',
+                visible: true,
+                messages: [
+                ],
+              },
+              {
+                name: 'Davide',
+                avatar: '_8',
+                visible: true,
+                messages: [{
+                    date: '10/01/2020 15:30:55',
+                    message: '',
+                    status: 'sent'
+                  },
+                  {
+                    date: '10/01/2020 15:50:00',
+                    message: '',
+                    status: 'sent'
+                  },
+                  {
+                    date: '10/01/2020 16:15:22',
+                    message: '',
                     status: 'received'
                   }
                 ],
@@ -127,13 +169,13 @@ createApp({
   setTimeout(()=> {this.userMessageObject(this.activeItem);},1000)
   },
   searchContact(){   
-    this.contacts.forEach(function (elements) {
-    const element = elements.name; 
-    if(this.textSearch.toLowerCase().includes(element.toLowerCase())) {
-      console.log('trovato')
-    } else{
-      console.log('errato')
-    }
+    this.contacts.forEach(elements => {
+      const element = elements.name;
+      if(telement.toLowerCase().includes(this.textSearch.toLowerCase())){
+       console.log(element)
+      }else{
+        console.log('sbagliato')
+      }
     });
   },
   
