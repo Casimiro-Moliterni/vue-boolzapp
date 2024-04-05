@@ -6,6 +6,8 @@
     <!-- link css  -->
     <link rel="stylesheet" href="css/style.css">
     <!-- link cdn vue js  -->
+    <!-- link luxon  -->
+    <script src=" https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- link font awesome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -55,7 +57,7 @@
                             <span class="grey-icon d-flex align-items-center justify-center ">
                               <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="grey-icon small-text">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="grey-icon small-text" >
                         </div>
                     </div>
                     <!-- container utenti  -->
@@ -110,7 +112,7 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <div class="message">
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newText" @keyup.enter="myText()">
                     </div>
                      <div class="audio">
                         <i class="fa-solid fa-microphone"></i>

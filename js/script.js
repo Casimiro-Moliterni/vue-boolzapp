@@ -1,9 +1,10 @@
 const { createApp } = Vue;
-
+const dt = luxon.DateTime;
 createApp({
     data() {
         return {
           activeItem: 0,
+          newText:'',
             contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -98,5 +99,22 @@ createApp({
       enableItem(indexToActivate) {
         this.activeItem = indexToActivate;
     },
+    getCurrentDate(){
+     return this.date =dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+    },
+    myText(){
+      const trimstring = this.newText.trim();
+       newObject = {
+        date:this.getCurrentDate(),
+        message: trimstring,
+        status: 'sent'
+      }  
+      
+     this.contacts[this.activeItem].messages.push(newObject); 
+      this.newText='';
+      console.log(this.contacts)
+    }
+    },
+    mounted(){
     }
 }).mount('#app');
