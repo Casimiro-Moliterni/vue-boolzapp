@@ -128,13 +128,17 @@ createApp({
   },
   searchContact(){   
     this.contacts.forEach(function (elements) {
-      const element = elements.name;  
-      console.log(element)
+    const element = elements.name; 
+    if(this.textSearch.toLowerCase().includes(element.toLowerCase())) {
+      console.log('trovato')
+    } else{
+      console.log('errato')
+    }
     });
   },
   
     },
     mounted(){
-  console.log(this.searchContact())
+  // console.log(this.searchContact())
     }
 }).mount('#app');
