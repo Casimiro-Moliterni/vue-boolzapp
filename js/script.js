@@ -174,13 +174,15 @@ createApp({
       const element = elements.name;
       if(element.toLowerCase().includes(this.textSearch.toLowerCase())){
        listName.push(element);
+       elements.visible = false;
+      }else{
+       elements.visible = true;
+      elements='';  
       }
+      console.log(elements)
     });
     console.log(listName)
   },
-  deleteItem(indexToDelete){
-    this.contacts.splice(indexToDelete,1);
-   },
   
     },
     mounted(){
