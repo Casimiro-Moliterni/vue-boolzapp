@@ -54,10 +54,10 @@
                     <!-- search bar  -->
                     <div class="search-bar d-flex align-items-center">
                         <div class="search d-flex">
-                            <span class="grey-icon d-flex align-items-center justify-center ">
+                            <span class="grey-icon d-flex align-items-center justify-center "  @click="searchContact()">
                               <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="grey-icon small-text" >
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="grey-icon small-text" v-model="textSearch" @keyup.enter="searchContact()">
                         </div>
                     </div>
                     <!-- container utenti  -->

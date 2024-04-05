@@ -5,6 +5,7 @@ createApp({
         return {
           activeItem: 0,
           newText:'',
+          textSearch:'',
             contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -124,8 +125,16 @@ createApp({
     },
   userMessage(){
   setTimeout(()=> {this.userMessageObject(this.activeItem);},1000)
-  }
+  },
+  searchContact(){   
+    this.contacts.forEach(function (elements) {
+      const element = elements.name;  
+      console.log(element)
+    });
+  },
+  
     },
     mounted(){
+  console.log(this.searchContact())
     }
 }).mount('#app');
