@@ -152,7 +152,10 @@ img {
     border-radius: 5px;
     padding: 10px 5px 5px 10px;
 }
-.receved-message{
+
+
+
+.message-box.received{
     background-color: white;
     margin-right: auto;
     margin-bottom: 10px;
@@ -162,7 +165,7 @@ img {
     margin-top: 4px;
     text-align: right;
 }
-.invied-message{
+.message-box.sent{
     background-color: #d5f9ba;
     margin-left: auto;
     margin-bottom: 10px;

@@ -97,16 +97,12 @@
                 </div>
                 <!-- parte centrale col-60  -->
                  <div class="container-message ">
-                    <div class="box-message   ">
-                        <div class="message-box receved-message" >
-                            <div class="text-script"></div>
-                            <div class="small-text clock-message">12/06/2024 14:40</div>
+                    
+                        <div class="message-box" v-for="singleMessage,index in contacts[activeItem].messages" :class="singleMessage.status">
+                            <div class="text-script " >{{singleMessage.message}}</div>
+                            <div class="small-text clock-message">{{singleMessage.date}}</div>
                         </div>
-                        <div class="message-box invied-message">
-                            <div class="text-script">bene garzie</div>
-                            <div class="small-text clock-message">12/06/2024 14:40</div>
-                        </div>
-                    </div>
+                   
                  </div>
                  <!-- container text input  -->
                  <div class="container-user-message d-flex align-items-center space-between">
