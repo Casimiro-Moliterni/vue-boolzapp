@@ -110,21 +110,7 @@ createApp({
                 name: 'Davide',
                 avatar: '_8',
                 visible: true,
-                messages: [{
-                    date: '10/01/2020 15:30:55',
-                    message: '',
-                    status: 'sent'
-                  },
-                  {
-                    date: '10/01/2020 15:50:00',
-                    message: '',
-                    status: 'sent'
-                  },
-                  {
-                    date: '10/01/2020 16:15:22',
-                    message: '',
-                    status: 'received'
-                  }
+                messages: [
                 ],
               },
             ],
@@ -169,19 +155,15 @@ createApp({
   setTimeout(()=> {this.userMessageObject(this.activeItem);},1000)
   },
   searchContact(){   
-    let listName =[];
+    
     this.contacts.forEach(elements => {
       const element = elements.name;
       if(element.toLowerCase().includes(this.textSearch.toLowerCase())){
-       listName.push(element);
-       elements.visible = false;
-      }else{
        elements.visible = true;
-      elements='';  
+      }else{
+       elements.visible = false;  
       }
-      console.log(elements)
     });
-    console.log(listName)
   },
   
     },

@@ -57,7 +57,8 @@
                             <span class="grey-icon d-flex align-items-center justify-center "  @click="searchContact()">
                               <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="grey-icon small-text" v-model="textSearch" @keyup.enter="searchContact()">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="grey-icon small-text"
+                             v-model="textSearch" @keyup.enter="searchContact()" @input="searchContact()">
                         </div>
                     </div>
                     <!-- container utenti  -->
@@ -67,6 +68,7 @@
                             v-for="singleUser,index in  contacts" 
                             @click="enableItem(index)"
                             :class="{'active': index === activeItem}"
+                            v-show="singleUser.visible === true"
                              >
                                <div class="img-user d-flex  ">
                                    <img :src="`img/avatar${singleUser.avatar}.jpg`" alt="">
