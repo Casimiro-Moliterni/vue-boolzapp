@@ -109,11 +109,22 @@ createApp({
         message: trimstring,
         status: 'sent'
       }  
-      
-     this.contacts[this.activeItem].messages.push(newObject); 
+      if(trimstring.length >= 1){
+        this.contacts[this.activeItem].messages.push(newObject); 
       this.newText='';
-      console.log(this.contacts)
-    }
+      }
+    },
+    userMessageObject(){
+      newObject = {
+        date:this.getCurrentDate(),
+        message:'ok',
+        status: 'received'
+      }
+      this.contacts[this.activeItem].messages.push(newObject); 
+    },
+  userMessage(){
+  setTimeout(()=> {this.userMessageObject(this.activeItem);},1000)
+  }
     },
     mounted(){
     }
