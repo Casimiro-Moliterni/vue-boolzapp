@@ -131,7 +131,7 @@ createApp({
         };
     },
     methods: {
-      activeContact(index){
+      activeContact(){
        if(this.contacts[index].visible === true){
         this.contacts[index].visible = false ;
        } else {
@@ -169,18 +169,21 @@ createApp({
   setTimeout(()=> {this.userMessageObject(this.activeItem);},1000)
   },
   searchContact(){   
+    let listName =[];
     this.contacts.forEach(elements => {
       const element = elements.name;
-      if(telement.toLowerCase().includes(this.textSearch.toLowerCase())){
-       console.log(element)
-      }else{
-        console.log('sbagliato')
+      if(element.toLowerCase().includes(this.textSearch.toLowerCase())){
+       listName.push(element);
       }
     });
+    console.log(listName)
   },
+  deleteItem(indexToDelete){
+    this.contacts.splice(indexToDelete,1);
+   },
   
     },
     mounted(){
-  // console.log(this.searchContact())
+
     }
 }).mount('#app');
